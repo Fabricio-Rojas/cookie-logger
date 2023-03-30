@@ -52,6 +52,10 @@ main {
     user-select: none;
 }
 
+label {
+    font-weight: bold;
+}
+
 /* Dialog 1 */
 
 .dlg1Btns {
@@ -79,3 +83,24 @@ main {
 }
 
 /* Dialog 2 */
+
+.dlg2 p {
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dlg2Btns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#preferencesBtn {
+    width: 150px;
+    height: 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #D61092;
+    color: #fff;
+}
