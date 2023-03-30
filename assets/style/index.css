@@ -1,0 +1,29 @@
+@import "./reset.css";
+
+/* Body and Main elements */
+.container {
+    width: min(100% - 30px, 1280px);
+    margin-inline: auto;
+}
+
+body {
+    background-color: #1a1d28;
+    background-image: url("../image/gameBG.jpg");
+    background-size: cover;
+    padding-top: 150px;
+}
+
+/* Main */
+
+.txt {
+    padding: 20px;
+    height: 450px;
+    width: 60vw;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #fff;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
