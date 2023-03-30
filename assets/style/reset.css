@@ -55,11 +55,11 @@ li, a, i, figure, img, button, input[type=button], input[type=submit] {
     text-decoration: none;
 }
 
-/* input, text, button {
+input, text, button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-} */
+}
 
 input[type=radio] {
     appearance: auto;
