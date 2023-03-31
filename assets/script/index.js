@@ -20,7 +20,7 @@ if (navigator.cookieEnabled) {
     if (!document.cookie) {
         console.log('No cookies set')
         setTimeout(() => {
-            dialogOne.open = true;
+            dialogOne.showModal();
         }, 1000);
     } else {
         console.log('Cookies set')
@@ -41,7 +41,7 @@ acceptBtn.addEventListener('click', function() {
 })
 
 settingsBtn.addEventListener('click', function() {
-    dialogTwo.open = true;
+    dialogTwo.showModal();
 })
 
 preferencesBtn.addEventListener('click', function() {
@@ -50,6 +50,15 @@ preferencesBtn.addEventListener('click', function() {
     // create checked cookies
     // create 'rejected' cookies for unselected cookies
     createChecked();
+})
+
+// Prevent esc from being used to close both dialogs
+dialogOne.addEventListener('cancel', function(e) {
+    e.preventDefault();
+})
+
+dialogTwo.addEventListener('cancel', function(e) {
+    e.preventDefault();
 })
 
 // Cookie functions

@@ -16,7 +16,7 @@ body {
 
 main {
     height: 100vh;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 }
@@ -34,26 +34,35 @@ main {
 
 /* Dialogs */
 
-.dlg1, .dlg2 {
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
+dialog {
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    user-select: none; 
+    animation: 0.25s linear anim;
     z-index: 1;
 }
 
-.dlg1 div, .dlg2 div {
-    margin: 220px auto 0;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: #fff;
-    width: 300px;
-    height: 275px;
-    user-select: none;
+dialog::backdrop {
+    background: rgba(13, 16, 19, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 label {
     font-weight: bold;
+}
+
+@keyframes anim {
+    from {
+        opacity: 0;
+        translate: 0 -8px;
+    } to {
+        opacity: 1;
+        translate: 0 0;
+    }
 }
 
 /* Dialog 1 */
@@ -61,7 +70,7 @@ label {
 .dlg1Btns {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #acceptBtn, #settingsBtn {
@@ -116,8 +125,8 @@ label {
 }
 
 .switch:checked {
-    border-color: #D61092;
-    box-shadow: inset 20px 0 0 0 #D61092;
+    border-color: #ff00aa;
+    box-shadow: inset 20px 0 0 0 #ff00aa;
 }
 
 .switch:checked::after {
